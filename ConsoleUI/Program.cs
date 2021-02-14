@@ -69,22 +69,76 @@ namespace ConsoleUI
             //colorManager.Add(color7);   // Renk db'ye aktarıldı.
             //colorManager.Delete(color7);   // Renk db'den silindi.
 
-            int i = 1;
-            foreach (var car in carManager.GetAll())
-            {
-                Console.WriteLine("{0}){1} ===> {2} TL", i, car.Name, car.DailyPrice);
-                i++;
-            }
+            //int i = 1;
+            //foreach (var car in carManager.GetAll().Data)
+            //{
+            //    Console.WriteLine("{0}){1}", i, car.Name);
+            //    i++;
+            //}
 
 
 
 
-            foreach (var car in carManager.GetCarDetails())
-            {
-                Console.WriteLine(car.CarName + " / " + car.BrandName + " / " + car.ColorName);
-            }
+            //foreach (var car in carManager.GetCarDetails().Data)
+            //{
+            //    Console.WriteLine(car.CarName + " / " + car.BrandName + " / " + car.ColorName);
+            //}
 
-            
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+
+            Customer customer1 = new Customer() { Id = 1, CompanyName = "Mobi Cosre", UserId = 1 };
+            Customer customer2 = new Customer() { Id = 2, CompanyName = "Bori Proge", UserId = 2 };
+            Customer customer3 = new Customer() { Id = 3, CompanyName = "Slow Coop", UserId = 3 };
+            Customer customer4 = new Customer() { Id = 4, CompanyName = "Slew Pros", UserId = 4 };
+            Customer customer5 = new Customer() { Id = 5, CompanyName = "Bran Smon", UserId = 5 };
+            Customer customer6 = new Customer() { Id = 6, CompanyName = "Serv Cpo", UserId = 6 };
+
+            List<Customer> customers = new List<Customer> { customer1,customer2,customer3,customer4, customer5, customer6 };
+
+            //foreach (var customer in customers)
+            //{
+            //    customerManager.Add(customer);
+            //}
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+            UserManager userManager = new UserManager(new EfUserDal());
+
+            User user1 = new User() { Id = 1, FirstName = "Yunus Emre", LastName = "Çiçek", Email = "abcde@hotmail.com", Password = "19730abc" };
+            User user2 = new User() { Id = 2, FirstName = "Enes Emir", LastName = "Çiçek", Email = "edcba@hotmail.com", Password = "14320akc" };
+            User user3 = new User() { Id = 3, FirstName = "Furkan", LastName = "Acar", Email = "vnedj@hotmail.com", Password = "19730ame" };
+            User user4 = new User() { Id = 4, FirstName = "Mert Ali", LastName = "Işık", Email = "vkdfoe@hotmail.com", Password = "12730abc" };
+            User user5 = new User() { Id = 5, FirstName = "Raymond", LastName = "Reddington", Email = "pocvs@hotmail.com", Password = "76230ldc" };
+            User user6 = new User() { Id = 6, FirstName = "Dembe", LastName = "Zuma", Email = "ovjser@hotmail.com", Password = "16730bpc" };
+
+            List<User> users = new List<User> { user1, user2, user3, user4, user5, user6 };
+
+            //foreach (var user in users)
+            //{
+            //    userManager.Add(user);
+            //}
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
+            Rental rental1 = new Rental() { Id = 1, CarId = 1, CustomerId = 2, RentDate = new DateTime(2021, 02, 20) };
+            Rental rental2 = new Rental() { Id = 2, CarId = 2, CustomerId = 3, RentDate = new DateTime(2021, 02, 22) };
+            Rental rental3 = new Rental() { Id = 3, CarId = 3, CustomerId = 1, RentDate = new DateTime(2021, 03, 14) };
+            Rental rental4 = new Rental() { Id = 4, CarId = 4, CustomerId = 5, RentDate = new DateTime(2021, 03, 12) };
+            Rental rental5 = new Rental() { Id = 5, CarId = 5, CustomerId = 6, RentDate = new DateTime(2021, 05, 10) };
+            Rental rental6 = new Rental() { Id = 6, CarId = 6, CustomerId = 6, RentDate = new DateTime(2021, 05, 10) };
+
+            List<Rental> rentals = new List<Rental> { rental1, rental2, rental3, rental4, rental5, rental6 };
+
+            //foreach (var rental in rentals)
+            //{
+            //    rentalManager.Add(rental);
+            //}
+
 
 
 
