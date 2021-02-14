@@ -51,7 +51,7 @@ namespace Business.Concrete
         {
             if (_rentalDal.GetAll(r => r.RentDate == null).Count == 0)
             {
-                return new ErrorDataResult<List<Rental>>(Message.OutOfStock);
+                return new ErrorDataResult<List<Rental>>(_rentalDal.GetAll(r => r.RentDate == null),Message.OutOfStock);
             }
 
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(r => r.RentDate == null));

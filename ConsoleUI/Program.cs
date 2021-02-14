@@ -139,7 +139,13 @@ namespace ConsoleUI
             //    rentalManager.Add(rental);
             //}
 
+            Car car7 = new Car() { BrandId = 2, ColorId = 3, DailyPrice = 500, ModelYear = 2010, Name = "Renault" };
+            //carManager.Add(car7);
 
+            foreach (var car in rentalManager.GetUnAvailableCars().Data)
+            {
+                Console.WriteLine(car.CarId);
+            }
 
 
 
