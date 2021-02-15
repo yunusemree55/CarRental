@@ -9,8 +9,7 @@ namespace Business.Constants
     {
         // Car Messages //
         public static string CarAdded = "Araba başarıyla eklendi";
-        public static string CarNameInvalid = "Araba ismi en az 2 karakter içermelidir";
-        public static string CarPriceInvalid = "Araba günlük kirası 0'dan büyük olmalıdır";
+        public static string InvalidCar = "Araba ekleme başarısız";
         public static string CarDeleted = "Araba başarıyla silindi";
         public static string CarUpdated = "Araba bilgileri başarıyla güncellendi";
         public static string CarListed = "Arabalar listelendi";
@@ -19,6 +18,7 @@ namespace Business.Constants
         public static string BrandAdded = "Marka başarıyla eklendi";
         public static string BrandDeleted = "Marka başarıyla silindi";
         public static string BrandUpdated = "Marka bilgileri güncellendi";
+        
 
         // Car Messages //
         public static string ColorUpdated = "Renk bilgileri güncellendi";
@@ -49,5 +49,6 @@ namespace Business.Constants
         public static string ListedOfUnAvailableCars = "Kiralanmış arabalar listelenmiştir";
         public static string RentalUpdated = "Kiralanan araba bilgileri güncellendi";
         internal static string SelectedRentalId = "Seçilen Id'ye göre kiralanan araba bilgileri görüntülenmiştir";
+        
     }
 }

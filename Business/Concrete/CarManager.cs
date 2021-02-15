@@ -22,14 +22,10 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if (car.Name.Length<2)
-            {
-                return new ErrorResult(Message.CarNameInvalid);
-            }
 
-            else if (car.DailyPrice == 0)
+            if (car.DailyPrice == 0)
             {
-                return new ErrorResult(Message.CarPriceInvalid);
+                return new ErrorResult(Message.InvalidCar);
             }
 
             _carDal.Add(car);

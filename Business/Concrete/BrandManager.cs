@@ -22,6 +22,7 @@ namespace Business.Concrete
 
         public IResult Add(Brand brand)
         {
+
             _brandDal.Add(brand);
             return new SuccessResult(Message.BrandAdded);
         }
