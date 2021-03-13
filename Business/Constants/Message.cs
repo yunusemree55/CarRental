@@ -48,7 +48,12 @@ namespace Business.Constants
         public static string FailUnAvailableCars = "Kiralanmış araba yoktur";
         public static string ListedOfUnAvailableCars = "Kiralanmış arabalar listelenmiştir";
         public static string RentalUpdated = "Kiralanan araba bilgileri güncellendi";
-        internal static string SelectedRentalId = "Seçilen Id'ye göre kiralanan araba bilgileri görüntülenmiştir";
-        
+        public static string SelectedRentalId = "Seçilen Id'ye göre kiralanan araba bilgileri görüntülenmiştir";
+
+        public static string LimitOfImage;
+        public static string AddedCarImage;
+        public static string DeletedCarImage;
+        public static string ListedAllCarImages;
+        public static string CarImageUpdated;
     }
 }

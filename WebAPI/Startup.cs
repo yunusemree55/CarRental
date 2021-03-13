@@ -49,6 +49,7 @@ namespace WebAPI
             //services.AddSingleton<IUserService, UserManager>();
             //services.AddSingleton<IUserDal, EfUserDal>();
 
+            services.AddCors();
 
         }
 
@@ -59,6 +60,8 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyOrigin());
 
             app.UseHttpsRedirection();
 
